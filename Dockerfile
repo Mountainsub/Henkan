@@ -1,9 +1,9 @@
-FROM python
+FROM python:3
 
 COPY requirements.txt /tmp/requirements.txt
-RUN python -m pip install -r /tmp/requirements.txt 
+RUN pip3 install -r /tmp/requirements.txt 
 
-FROM python
+FROM ubuntu:18.04
 
 RUN apt -y update && apt install -y libsm6
 RUN apt install -y libxrender1
